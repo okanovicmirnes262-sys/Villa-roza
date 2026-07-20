@@ -98,7 +98,7 @@ const I18N = {
     "f.note": "Slanjem upita otvara se vaš e-mail program s pripremljenom porukom za info@pandoraturist.hr.",
 
     "contact.eyebrow": "Kontakt",
-    "contact.title": "Doviđenja u Srimi",
+    "contact.title": "Uskoro se vidimo",
     "c.addr.title": "Adresa",
     "c.phone.title": "Telefon",
     "c.email.title": "E-mail",
@@ -335,7 +335,7 @@ const I18N = {
     "f.note": "Submitting the form opens your e-mail app with a message prepared for info@pandoraturist.hr.",
 
     "contact.eyebrow": "Contact",
-    "contact.title": "See you in Srima",
+    "contact.title": "See you soon",
     "c.addr.title": "Address",
     "c.phone.title": "Phone",
     "c.email.title": "E-mail",
@@ -567,7 +567,7 @@ const I18N = {
     "f.note": "Beim Absenden öffnet sich Ihr E-Mail-Programm mit einer vorbereiteten Nachricht an info@pandoraturist.hr.",
 
     "contact.eyebrow": "Kontakt",
-    "contact.title": "Auf Wiedersehen in Srima",
+    "contact.title": "Bis bald",
     "c.addr.title": "Adresse",
     "c.phone.title": "Telefon",
     "c.email.title": "E-Mail",
