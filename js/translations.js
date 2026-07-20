@@ -10,6 +10,7 @@ const I18N = {
     "nav.contact": "Kontakt",
     "nav.book": "Pošaljite upit",
 
+    "welcome.msg": "Dobro došli",
     "hero.eyebrow": "Srima · Vodice · Dalmacija",
     "hero.title": "Vaš odmor na Jadranu počinje ovdje",
     "hero.sub": "Obiteljska tvrtka s vlastitim superior vilama, izletničkim brodom i restoranom u Srimi kraj Vodica — na samo 200 metara od mora.",
@@ -246,6 +247,7 @@ const I18N = {
     "nav.contact": "Contact",
     "nav.book": "Send inquiry",
 
+    "welcome.msg": "Welcome",
     "hero.eyebrow": "Srima · Vodice · Dalmatia",
     "hero.title": "Your Adriatic holiday starts here",
     "hero.sub": "A family-owned company with its own superior villas, excursion boat and restaurant in Srima near Vodice — just 200 metres from the sea.",
@@ -477,6 +479,7 @@ const I18N = {
     "nav.contact": "Kontakt",
     "nav.book": "Anfrage senden",
 
+    "welcome.msg": "Herzlich willkommen",
     "hero.eyebrow": "Srima · Vodice · Dalmatien",
     "hero.title": "Ihr Urlaub an der Adria beginnt hier",
     "hero.sub": "Ein Familienunternehmen mit eigenen Superior-Villen, Ausflugsboot und Restaurant in Srima bei Vodice — nur 200 Meter vom Meer entfernt.",

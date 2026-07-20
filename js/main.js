@@ -33,6 +33,26 @@
 
   applyLang(currentLang());
 
+  /* ---------- Ekran dobrodošlice (samo pri ulasku na stranicu) ---------- */
+
+  const welcome = document.getElementById("welcome-screen");
+
+  if (welcome) {
+    const internal = document.referrer && document.referrer.indexOf(location.origin) === 0;
+    if (internal) {
+      welcome.remove();
+    } else {
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        welcome.classList.add("hide");
+        document.body.style.overflow = "";
+        const vile = document.getElementById("vile");
+        if (vile) vile.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => welcome.remove(), 700);
+      }, 2000);
+    }
+  }
+
   /* ---------- Zaglavlje pri skrolanju ---------- */
 
   const header = document.querySelector(".site-header");
