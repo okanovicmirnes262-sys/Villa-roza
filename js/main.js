@@ -63,6 +63,23 @@
     );
   }
 
+  /* ---------- Galerija fotografija vile ---------- */
+
+  document.querySelectorAll("[data-gallery]").forEach((box) => {
+    const slug = box.dataset.gallery;
+    const count = parseInt(box.dataset.count, 10) || 0;
+    for (let i = 1; i <= count; i++) {
+      const item = document.createElement("div");
+      item.className = "g-item";
+      const img = document.createElement("img");
+      img.src = "assets/img/" + slug + "/" + slug + "-" + String(i).padStart(2, "0") + ".jpg";
+      img.alt = box.dataset.alt || slug;
+      img.loading = "lazy";
+      item.appendChild(img);
+      box.appendChild(item);
+    }
+  });
+
   /* ---------- Animacija pri skrolanju ---------- */
 
   const observer = new IntersectionObserver(
