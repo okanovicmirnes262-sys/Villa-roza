@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="vnsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8d4e4"/><stop offset="1" stop-color="#eee6d2"/>
+    </linearGradient>
+    <linearGradient id="vnpool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fb6d4"/><stop offset="1" stop-color="#2e86a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#vnsky)"/>
+  <rect y="620" width="1200" height="280" fill="#d9cfb8"/>
+  <rect x="180" y="260" width="620" height="380" fill="#f5f1e8"/>
+  <rect x="180" y="260" width="620" height="20" fill="#e0d7c4"/>
+  <rect x="230" y="320" width="130" height="150" fill="#7fb2c6"/>
+  <rect x="420" y="320" width="130" height="150" fill="#7fb2c6"/>
+  <rect x="610" y="320" width="130" height="150" fill="#7fb2c6"/>
+  <g fill="#f5f1e8" opacity="0.35">
+    <rect x="230" y="320" width="130" height="70"/><rect x="420" y="320" width="130" height="70"/><rect x="610" y="320" width="130" height="70"/>
+  </g>
+  <rect x="220" y="470" width="150" height="8" fill="#b08d57"/>
+  <rect x="410" y="470" width="150" height="8" fill="#b08d57"/>
+  <rect x="600" y="470" width="150" height="8" fill="#b08d57"/>
+  <rect x="230" y="520" width="200" height="120" fill="#8fb9cc"/>
+  <rect x="520" y="520" width="110" height="120" fill="#c9b892"/>
+  <rect x="800" y="360" width="220" height="280" fill="#ece5d4"/>
+  <rect x="840" y="420" width="140" height="90" fill="#7fb2c6"/>
+  <ellipse cx="1050" cy="480" rx="60" ry="150" fill="#5c8a5e"/>
+  <rect x="1042" y="560" width="16" height="90" fill="#7a5b3a"/>
+  <ellipse cx="120" cy="500" rx="55" ry="140" fill="#67955f"/>
+  <rect x="112" y="570" width="16" height="80" fill="#7a5b3a"/>
+  <path d="M140 690 h 700 l 60 130 H 80 Z" fill="url(#vnpool)"/>
+  <path d="M180 720 q 200 -16 420 0 t 260 6" stroke="#bfe4ef" stroke-width="6" fill="none" opacity="0.6"/>
+  <path d="M160 770 q 260 -16 480 0 t 240 4" stroke="#bfe4ef" stroke-width="7" fill="none" opacity="0.45"/>
+  <rect x="900" y="700" width="180" height="14" fill="#c9a071"/>
+  <rect x="920" y="714" width="140" height="10" fill="#b08d57"/>
+</svg>

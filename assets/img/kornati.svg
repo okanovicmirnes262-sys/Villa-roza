@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ksky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9ccadd"/><stop offset="1" stop-color="#e8e4d0"/>
+    </linearGradient>
+    <linearGradient id="ksea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#33809c"/><stop offset="1" stop-color="#14465c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="460" fill="url(#ksky)"/>
+  <rect y="440" width="1200" height="460" fill="url(#ksea)"/>
+  <ellipse cx="240" cy="440" rx="260" ry="60" fill="#9aa98e"/>
+  <ellipse cx="240" cy="432" rx="260" ry="52" fill="#b3bd9c"/>
+  <ellipse cx="700" cy="450" rx="180" ry="42" fill="#8d9c82"/>
+  <ellipse cx="700" cy="444" rx="180" ry="36" fill="#a8b394"/>
+  <ellipse cx="1080" cy="440" rx="220" ry="55" fill="#95a488"/>
+  <ellipse cx="1080" cy="433" rx="220" ry="47" fill="#adb897"/>
+  <path d="M0 560 q 300 -18 600 0 t 600 0" stroke="#6fa8bd" stroke-width="6" fill="none" opacity="0.45"/>
+  <path d="M0 680 q 300 -18 600 0 t 600 -4" stroke="#6fa8bd" stroke-width="7" fill="none" opacity="0.3"/>
+  <g>
+    <path d="M760 610 q 60 26 120 0 l -12 -16 h -96 Z" fill="#f4efe4"/>
+    <rect x="812" y="556" width="6" height="42" fill="#8a6b45"/>
+    <path d="M818 558 q 34 16 0 34 Z" fill="#e8e0cd"/>
+  </g>
+  <circle cx="960" cy="180" r="65" fill="#fbeec2"/>
+</svg>

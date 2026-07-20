@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="plsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ec5dc"/><stop offset="1" stop-color="#f0e8d2"/>
+    </linearGradient>
+    <linearGradient id="plsea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#49a2c4"/><stop offset="1" stop-color="#1f6d8c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#plsky)"/>
+  <circle cx="260" cy="170" r="70" fill="#fbeec2"/>
+  <rect y="440" width="1200" height="260" fill="url(#plsea)"/>
+  <path d="M0 700 Q 300 640 700 690 T 1200 660 V 900 H 0 Z" fill="#eadfc0"/>
+  <path d="M0 705 Q 300 648 700 695 T 1200 668" stroke="#f6efe0" stroke-width="10" fill="none" opacity="0.8"/>
+  <path d="M0 560 q 300 -16 600 0 t 600 0" stroke="#7fc0d6" stroke-width="6" fill="none" opacity="0.5"/>
+  <g>
+    <path d="M330 640 l 8 -170 q 90 30 74 120 q -50 -22 -82 50 Z" fill="#4c8a4f"/>
+    <path d="M338 640 l -6 -168 q -88 34 -70 122 q 48 -24 76 46 Z" fill="#5c9a58"/>
+    <rect x="326" y="600" width="14" height="130" fill="#9c7a4e"/>
+  </g>
+  <circle cx="820" cy="740" r="46" fill="#e8dcc8"/>
+  <path d="M820 694 a 46 46 0 0 1 46 46 h -46 Z" fill="#c05a4e"/>
+  <rect x="814" y="740" width="12" height="90" fill="#a8834f"/>
+  <rect x="700" y="790" width="240" height="16" rx="8" fill="#f2ead8"/>
+</svg>
