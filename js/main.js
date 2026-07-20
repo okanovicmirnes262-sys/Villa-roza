@@ -46,8 +46,6 @@
       setTimeout(() => {
         welcome.classList.add("hide");
         document.body.style.overflow = "";
-        const vile = document.getElementById("vile");
-        if (vile) vile.scrollIntoView({ behavior: "smooth" });
         setTimeout(() => welcome.remove(), 700);
       }, 2000);
     }
