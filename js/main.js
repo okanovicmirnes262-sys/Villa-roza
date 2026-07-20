@@ -100,6 +100,51 @@
     }
   });
 
+  /* ---------- Karusel vila ---------- */
+
+  const slider = document.getElementById("villa-slider");
+
+  if (slider) {
+    const track = slider.querySelector(".vs-track");
+    const slides = [...slider.querySelectorAll(".vs-slide")];
+    const dotsBox = slider.querySelector(".vs-dots");
+    let current = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Vila " + (i + 1));
+      dot.addEventListener("click", () => go(i));
+      dotsBox.appendChild(dot);
+    });
+    const dots = [...dotsBox.children];
+
+    function go(i) {
+      current = (i + slides.length) % slides.length;
+      const slide = slides[current];
+      const offset = slider.offsetWidth / 2 - slide.offsetLeft - slide.offsetWidth / 2;
+      track.style.transform = "translateX(" + offset + "px)";
+      slides.forEach((s, j) => s.classList.toggle("active", j === current));
+      dots.forEach((d, j) => d.classList.toggle("active", j === current));
+    }
+
+    slider.querySelector(".vs-prev").addEventListener("click", () => go(current - 1));
+    slider.querySelector(".vs-next").addEventListener("click", () => go(current + 1));
+    window.addEventListener("resize", () => go(current));
+
+    let startX = null;
+    track.addEventListener("pointerdown", (e) => { startX = e.clientX; });
+    track.addEventListener("pointerup", (e) => {
+      if (startX === null) return;
+      const dx = e.clientX - startX;
+      if (dx > 40) go(current - 1);
+      else if (dx < -40) go(current + 1);
+      startX = null;
+    });
+
+    go(0);
+  }
+
   /* ---------- Animacija pri skrolanju ---------- */
 
   const observer = new IntersectionObserver(
