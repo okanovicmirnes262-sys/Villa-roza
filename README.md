@@ -14,6 +14,7 @@ Statična web stranica za obiteljsku tvrtku **Pandora Turist** iz Srime kraj Vod
 | `css/style.css` | Sav dizajn (elegantno svijetli stil, responzivno) |
 | `js/translations.js` | Prijevodi HR / EN / DE |
 | `js/main.js` | Prekidač jezika, navigacija, animacije, obrazac za upit |
+| `js/nika.js`, `css/nika.css` | Chatbot Nika (baza znanja HR/EN/DE, upit za rezervaciju) |
 | `assets/img/*.svg` | Ilustracije-rezervacije mjesta za prave fotografije |
 
 ## Pokretanje
@@ -35,3 +36,13 @@ Obrazac na naslovnici (`#upit`) ne zahtijeva backend: slanjem se otvara e-mail p
 ## Zamjena ilustracija pravim fotografijama
 
 Slike u `assets/img/` stilizirane su SVG ilustracije koje služe kao rezervirana mjesta. Za pravu produkciju zamijenite ih fotografijama (npr. `villa-nika.jpg`) i ažurirajte `src` atribute u HTML-u — sav raspored (object-fit: cover) radit će jednako s fotografijama bilo koje veličine.
+
+## Chatbot Nika
+
+Nika je virtualna asistentica koja se prikazuje kao plutajući gumb na svim stranicama. Radi bez poslužitelja i bez troškova: odgovara iz baze znanja u `js/nika.js`, sastavljene od sadržaja ove stranice (vile, izleti, restoran, destinacija, kontakt).
+
+- **Jezik**: odgovara na jeziku odabranom na stranici; ako gost piše na drugom jeziku (HR/EN/DE), prilagođava se.
+- **Upit za rezervaciju**: prikuplja vilu/izlet/stol, termin, broj osoba, ime i telefon, pa nudi slanje e-mailom, WhatsAppom ili poziv.
+- **Razgovor se pamti** tijekom posjeta (sessionStorage) i nastavlja se pri prelasku na drugu stranicu.
+
+Kad se promijeni neki podatak na stranici (npr. kapacitet vile ili vrijeme polaska broda), ažurirajte isti podatak i u `js/nika.js` — tekstovi odgovora nalaze se u objektu `T` (po jezicima), a podaci o vilama u objektu `VILLAS`.
