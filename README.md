@@ -43,6 +43,11 @@ Nika je virtualna asistentica koja se prikazuje kao plutajući gumb na svim stra
 
 - **Jezik**: odgovara na jeziku odabranom na stranici; ako gost piše na drugom jeziku (HR/EN/DE), prilagođava se.
 - **Upit za rezervaciju**: prikuplja vilu/izlet/stol, termin, broj osoba, ime i telefon, pa nudi slanje e-mailom, WhatsAppom ili poziv.
+- **Naredba `/clear`** (ili `/obriši`) briše razgovor, započeti upit i kontekst.
 - **Razgovor se pamti** tijekom posjeta (sessionStorage) i nastavlja se pri prelasku na drugu stranicu.
 
 Kad se promijeni neki podatak na stranici (npr. kapacitet vile ili vrijeme polaska broda), ažurirajte isti podatak i u `js/nika.js` — tekstovi odgovora nalaze se u objektu `T` (po jezicima), a podaci o vilama u objektu `VILLAS`.
+
+## Nakon izmjena CSS-a ili JS-a
+
+Sve stranice učitavaju `css/*.css` i `js/*.js` s oznakom verzije (npr. `js/nika.js?v=3`). Kad izmijenite neku od tih datoteka, povećajte broj (`?v=4`) u svim HTML datotekama — tako preglednici posjetitelja odmah učitaju novu verziju umjesto stare iz predmemorije.

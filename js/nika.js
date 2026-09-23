@@ -657,7 +657,7 @@
   function userSay(text) {
     text = String(text).trim().slice(0, 300);
     if (!text || busy) return;
-    if (text.toLowerCase() === "/clear") return clearConversation();
+    if (isClearCommand(text)) return clearConversation();
     pushUser(text);
     botRespond(() => reply(text));
   }
@@ -666,6 +666,11 @@
     if (busy) return;
     pushUser(label);
     botRespond(() => startFlow(state.lang || uiLang(), item || null));
+  }
+
+  function isClearCommand(text) {
+    const t = norm(text).replace(/[\s.!]+$/g, "").replace(/^[\/\\\uff0f]\s*/, "");
+    return ["clear", "obrisi", "izbrisi", "reset", "loschen"].includes(t) && /^\s*[\/\\\uff0f]/.test(text);
   }
 
   function clearConversation() {
