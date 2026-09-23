@@ -71,6 +71,7 @@
       openL: "Razgovarajte s Nikom",
       closeL: "Zatvori",
       bubble: "Bok, ja sam Nika! 👋 Mogu li vam pomoći?",
+      cleared: "🧹 Razgovor je obrisan.",
       hello: "Bok! Ja sam <b>Nika</b>, virtualna asistentica Pandora Turista. 👋<br>Pitajte me o našim vilama, izletu brodom ili restoranu Villa Roza — ili odmah pošaljite upit za rezervaciju.",
       cVillas: "Vile", cBoat: "Izlet brodom", cRest: "Restoran", cBook: "Rezervacija", cContact: "Kontakt", cOther: "Ostale vile", cCancel: "Odustani", cTable: "Stol u restoranu",
       bCall: "📞 Nazovi", bMail: "✉️ E-mail", bDetails: "Fotografije i detalji", bBookVilla: "Rezerviraj ovu vilu", bBookBoat: "Rezerviraj izlet", bBookRest: "Rezerviraj stol",
@@ -142,6 +143,7 @@
       openL: "Chat with Nika",
       closeL: "Close",
       bubble: "Hi, I'm Nika! 👋 Can I help you?",
+      cleared: "🧹 The conversation has been cleared.",
       hello: "Hi! I'm <b>Nika</b>, Pandora Turist's virtual assistant. 👋<br>Ask me about our villas, the boat trip or restaurant Villa Roza — or send a booking inquiry right away.",
       cVillas: "Villas", cBoat: "Boat trip", cRest: "Restaurant", cBook: "Booking", cContact: "Contact", cOther: "Other villas", cCancel: "Cancel", cTable: "Restaurant table",
       bCall: "📞 Call us", bMail: "✉️ E-mail", bDetails: "Photos & details", bBookVilla: "Book this villa", bBookBoat: "Book the trip", bBookRest: "Reserve a table",
@@ -213,6 +215,7 @@
       openL: "Mit Nika chatten",
       closeL: "Schließen",
       bubble: "Hallo, ich bin Nika! 👋 Kann ich helfen?",
+      cleared: "🧹 Der Chatverlauf wurde gelöscht.",
       hello: "Hallo! Ich bin <b>Nika</b>, die virtuelle Assistentin von Pandora Turist. 👋<br>Fragen Sie mich zu unseren Villen, dem Bootsausflug oder dem Restaurant Villa Roza — oder senden Sie gleich eine Buchungsanfrage.",
       cVillas: "Villen", cBoat: "Bootsausflug", cRest: "Restaurant", cBook: "Buchen", cContact: "Kontakt", cOther: "Weitere Villen", cCancel: "Abbrechen", cTable: "Tisch im Restaurant",
       bCall: "📞 Anrufen", bMail: "✉️ E-Mail", bDetails: "Fotos & Details", bBookVilla: "Diese Villa anfragen", bBookBoat: "Ausflug buchen", bBookRest: "Tisch reservieren",
@@ -654,6 +657,7 @@
   function userSay(text) {
     text = String(text).trim().slice(0, 300);
     if (!text || busy) return;
+    if (text.toLowerCase() === "/clear") return clearConversation();
     pushUser(text);
     botRespond(() => reply(text));
   }
@@ -662,6 +666,16 @@
     if (busy) return;
     pushUser(label);
     botRespond(() => startFlow(state.lang || uiLang(), item || null));
+  }
+
+  function clearConversation() {
+    state.msgs = [];
+    state.flow = null;
+    state.ctx = {};
+    state.lang = null;
+    msgsEl.innerHTML = "";
+    const h = hello();
+    pushBot({ h: T[uiLang()].cleared + "<br><br>" + h.h, b: h.b });
   }
 
   function hello() {
